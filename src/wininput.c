@@ -3536,6 +3536,9 @@ static struct {
         insert_alt_code();
         alt_state = ALT_NONE;
       }
+      else if (key == ' ' && ctrl) { // && (cfg.old_modify_keys & 64)) {
+        ctrl_ch(CTRL(' '));
+      }
       else
       if (key > 'F' && alt_code_ignore()) {
       }
