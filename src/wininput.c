@@ -3291,7 +3291,8 @@ static struct {
 
       char c;
       switch (wc) {
-        when '@' or '[' ... '_' or 'a' ... 'z': c = CTRL(wc);
+        //when '@' or '[' ... '_' or 'a' ... 'z': c = CTRL(wc);
+        when '[' ... '_' or 'a' ... 'z': c = CTRL(wc);
         when '/': c = CTRL('_');
         when '?': c = CDEL;
         otherwise: return false;
